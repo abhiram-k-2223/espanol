@@ -119,6 +119,15 @@ function selectLesson(id) {
     el.classList.toggle('active', Number(el.dataset.id) === id);
   });
 
+  // Update prev/next buttons
+  const idx = lessons.findIndex(l => l.id === id);
+  const prev = lessons[idx - 1];
+  const next = lessons[idx + 1];
+  $('prevBtn').disabled = !prev;
+  $('prevBtn').onclick = prev ? () => selectLesson(prev.id) : null;
+  $('nextBtn').disabled = !next;
+  $('nextBtn').onclick = next ? () => selectLesson(next.id) : null;
+
   // Scroll main to top
   $('main').scrollTop = 0;
 }

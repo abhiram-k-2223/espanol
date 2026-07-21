@@ -486,6 +486,51 @@ body {
 
 .lesson-body table tr:hover td { background: var(--bg-hover); }
 
+/* ───── LESSON NAV ───── */
+.lesson-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 18px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color var(--transition), color var(--transition), background var(--transition);
+}
+
+.nav-btn:hover:not(:disabled) {
+  border-color: var(--gold-dim);
+  color: var(--text-bright);
+  background: var(--bg-hover);
+}
+
+.nav-btn:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+.nav-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.nav-btn:first-child { text-align: left; }
+.nav-btn:last-child { text-align: right; }
+
 .lesson-body hr {
   border: none;
   height: 1px;
