@@ -615,7 +615,7 @@ body {
   .sidebar.open { transform: translateX(0); }
   .sidebar-close { display: block; }
   .main { padding: 24px 20px 100px; }
-  .main::after { left: 0; }
+  .main::after { left: 0; height: 30px; }
 }
 
 @media (max-width: 600px) {
