@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gotham Grammar · Spanish</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="apple-mobile-web-app-title" content="Gotham Gram.">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <svg class="brand-bat" viewBox="0 0 36 36" fill="none">
+            <path d="M18 2C10 2 4 8 4 14c0 3 1.5 6 4 8l-3 4c4-1 7-3 9-5l-2-3c2 2 4 3 6 3s4-1 6-3l-2 3c2 2 5 4 9 5l-3-4c2.5-2 4-5 4-8 0-6-6-12-14-12z" fill="currentColor"/>
+          </svg>
+          <div class="brand-text">
+            <span class="brand-title">GOTHAM</span>
+            <span class="brand-sub">grammar · 108 lecciones</span>
+          </div>
+        </div>
+        <div class="topbar-controls">
+          <div class="search-wrap">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+            </svg>
+            <input type="text" id="search" placeholder="Search lessons...  ⌘K" autocomplete="off">
+          </div>
+          <button class="unit-filter-btn" id="unitFilterBtn" title="Filter by unit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z"/>
+            </svg>
+            <span>Units</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <h2>Units</h2>
+          <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6 6 18M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+        <nav class="unit-list" id="unitList"></nav>
+      </aside>
+
+      <main class="main" id="main">
+        <div class="lesson-view" id="lessonView" hidden>
+          <div class="lesson-header">
+            <div class="lesson-meta">
+              <span class="lesson-badge" id="lessonBadge"></span>
+              <span class="lesson-unit-tag" id="lessonUnitTag"></span>
+            </div>
+            <h1 class="lesson-title" id="lessonTitle"></h1>
+          </div>
+          <div class="lesson-body" id="lessonBody"></div>
+        </div>
+
+        <div class="loading" id="loading">
+          <svg class="loading-bat" viewBox="0 0 40 40" fill="none">
+            <path d="M20 2C11 2 4 8 4 16c0 3 1.5 6 4 8l-3 4c4-1 7-3 9-5l-2-3c2 2 4 3 6 3s4-1 6-3l-2 3c2 2 5 4 9 5l-3-4c2.5-2 4-5 4-8 0-8-7-14-16-14z" fill="currentColor"/>
+          </svg>
+          <p>Calling the shadows...</p>
+        </div>
+      </main>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
