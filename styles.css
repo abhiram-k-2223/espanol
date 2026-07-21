@@ -492,7 +492,7 @@ body {
   justify-content: space-between;
   gap: 12px;
   margin-top: 40px;
-  padding-top: 20px;
+  padding: 20px 0 0;
   border-top: 1px solid var(--border);
 }
 
@@ -500,7 +500,7 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  padding: 10px 18px;
+  padding: 12px 20px;
   background: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -509,7 +509,8 @@ body {
   font-size: 0.82rem;
   font-weight: 500;
   cursor: pointer;
-  transition: border-color var(--transition), color var(--transition), background var(--transition);
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .nav-btn:hover:not(:disabled) {
@@ -520,16 +521,13 @@ body {
 
 .nav-btn:disabled {
   opacity: 0.25;
-  cursor: default;
 }
 
 .nav-btn svg {
   width: 16px;
   height: 16px;
+  flex-shrink: 0;
 }
-
-.nav-btn:first-child { text-align: left; }
-.nav-btn:last-child { text-align: right; }
 
 .lesson-body hr {
   border: none;
@@ -614,8 +612,21 @@ body {
 
   .sidebar.open { transform: translateX(0); }
   .sidebar-close { display: block; }
-  .main { padding: 24px 20px 100px; }
-  .main::after { left: 0; height: 30px; }
+  .main { padding: 24px 20px 80px; }
+  .main::after { left: 0; height: 24px; }
+  .lesson-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin: 0;
+    padding: 10px 20px;
+    background: var(--bg-elevated);
+    border-top: 1px solid var(--border);
+    border-top-color: var(--border-light);
+  }
+  .nav-btn { flex: 1; justify-content: center; }
 }
 
 @media (max-width: 600px) {
@@ -625,11 +636,12 @@ body {
   .unit-filter-btn span { display: none; }
   .unit-filter-btn { padding: 7px; }
   .search-wrap { max-width: none; }
-  .main { padding: 16px 16px 90px; }
+  .main { padding: 16px 16px 76px; }
   .lesson-title { font-size: 1.2rem; }
   .lesson-body { font-size: 0.88rem; }
   .welcome h1 { font-size: 1.25rem; }
   .sidebar { width: 280px; min-width: 280px; }
+  .lesson-nav { padding: 8px 12px; }
 }
 
 @media (max-width: 400px) {
