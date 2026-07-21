@@ -614,7 +614,7 @@ body {
 
   .sidebar.open { transform: translateX(0); }
   .sidebar-close { display: block; }
-  .main { padding: 24px 20px; }
+  .main { padding: 24px 20px 100px; }
   .main::after { left: 0; }
 }
 
@@ -625,7 +625,7 @@ body {
   .unit-filter-btn span { display: none; }
   .unit-filter-btn { padding: 7px; }
   .search-wrap { max-width: none; }
-  .main { padding: 16px; }
+  .main { padding: 16px 16px 90px; }
   .lesson-title { font-size: 1.2rem; }
   .lesson-body { font-size: 0.88rem; }
   .welcome h1 { font-size: 1.25rem; }
