@@ -1,4 +1,4 @@
-const CACHE = 'abhiram-v1';
+const CACHE = 'abhiram-v2';
 
 const PRECACHE = [
   '.',
