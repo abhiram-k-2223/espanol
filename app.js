@@ -111,7 +111,7 @@ function selectLesson(id) {
   $('lessonTitle').textContent = lesson.title;
   $('lessonBody').innerHTML = renderContent(lesson.content);
 
-  document.title = `${lesson.title} · Gotham Grammar`;
+  document.title = `${lesson.title} · Abhiram Grammar`;
   location.hash = lesson.slug;
 
   // Update sidebar active state

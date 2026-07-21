@@ -4,7 +4,7 @@ set -e
 DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$DIR"
 
-echo "==> Deploying Gotham Grammar to GitHub Pages..."
+echo "==> Deploying Abhiram Grammar to GitHub Pages..."
 
 # Init git if not already
 if [ ! -d .git ]; then
